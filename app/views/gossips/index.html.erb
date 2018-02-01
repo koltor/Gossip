@@ -1,0 +1,15 @@
+<h1>Gossips</h1>
+
+<% @gossips.each do |gossips| %>
+	<p><%= gossips.content %>
+		<a href="<%=gossip_path(gossips.id) %>" data-confirm="ête vous sur?" data-method="DELETE">supprimer</a>
+	</p>
+	<p>
+		<a href="<%=gossip_path(gossips.id) %>">voir</a>
+		<a href="<%=edit_gossip_path(gossips.id) %>">modifier</a>
+	</p>
+<% end %>
+
+<p>
+	<a href="<%=new_gossip_path %>">creer un gossip</a>
+</p>

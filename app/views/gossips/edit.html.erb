@@ -1,0 +1,13 @@
+<h1>modifier un Gossip</h1>
+<%= form_for @gossips do |gossip| %>
+	<p>
+	<strong> nom :</strong>
+ 	 <%= gossip.text_field :anonymous_author %>
+	</p>
+	<p>
+		<strong> contenu :</strong>
+  		<%= gossip.text_area :content %>
+  	</p>
+  	<button type: submit>modifier </button>
+
+<% end %>
